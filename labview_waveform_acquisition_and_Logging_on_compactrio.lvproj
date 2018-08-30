@@ -372,10 +372,10 @@
 		<Property Name="target.IsRemotePanelSupported" Type="Bool">true</Property>
 		<Property Name="target.RTCPULoadMonitoringEnabled" Type="Bool">true</Property>
 		<Property Name="target.RTDebugWebServerHTTPPort" Type="Int">8001</Property>
-		<Property Name="target.RTTarget.ApplicationPath" Type="Path">/c/ni-rt/startup/startup.rtexe</Property>
+		<Property Name="target.RTTarget.ApplicationPath" Type="Path">/home/lvuser/natinst/bin/lv_waveform_acquisition_and_logging_on_crio9036.rtexe</Property>
 		<Property Name="target.RTTarget.EnableFileSharing" Type="Bool">true</Property>
 		<Property Name="target.RTTarget.IPAccess" Type="Str">+*</Property>
-		<Property Name="target.RTTarget.LaunchAppAtBoot" Type="Bool">false</Property>
+		<Property Name="target.RTTarget.LaunchAppAtBoot" Type="Bool">true</Property>
 		<Property Name="target.RTTarget.VIPath" Type="Path">/home/lvuser/natinst/bin</Property>
 		<Property Name="target.server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="target.server.control.propertiesEnabled" Type="Bool">true</Property>
@@ -1322,6 +1322,9 @@ AddOutputFilter chunkFilter
 				<Item Name="WDT Get Waveform Subset I32.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Get Waveform Subset I32.vi"/>
 				<Item Name="WDT Get Waveform Subset I8.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Get Waveform Subset I8.vi"/>
 				<Item Name="WDT Get Waveform Subset SGL.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Get Waveform Subset SGL.vi"/>
+				<Item Name="Get Final Time Value.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/Get Final Time Value.vi"/>
+				<Item Name="DWDT Get Final Time Value.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DWDTOps.llb/DWDT Get Final Time Value.vi"/>
+				<Item Name="WDT Get Final Time Value DBL.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Get Final Time Value DBL.vi"/>
 			</Item>
 			<Item Name="nNIBlueBus_nCrioFixed_nRefnum.dll" Type="Document" URL="nNIBlueBus_nCrioFixed_nRefnum.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -1333,7 +1336,58 @@ AddOutputFilter chunkFilter
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 		</Item>
-		<Item Name="Build Specifications" Type="Build"/>
+		<Item Name="Build Specifications" Type="Build">
+			<Item Name="rt_app_02_01" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{6EB4359B-212A-4003-96ED-A535864DE935}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{00D02E8B-2A38-4441-A9A1-F7DAF8E3C798}</Property>
+				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
+				<Property Name="App_winsec.description" Type="Str">http://www.TJU.com</Property>
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{EECA6FBA-E79C-4BD3-9101-C17E96CFEC22}</Property>
+				<Property Name="Bld_buildSpecDescription" Type="Str">Target Type: cRIO9036; 
+LabVIEW Version: 2015;
+Scan Engine Interface. </Property>
+				<Property Name="Bld_buildSpecName" Type="Str">rt_app_02_01</Property>
+				<Property Name="Bld_defaultLanguage" Type="Str">ChineseS</Property>
+				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../rt_builds/NI_AB_TARGETNAME/rt_app_02_01</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{7FB6F66D-96F1-4500-9109-2C41EFB9DED2}</Property>
+				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
+				<Property Name="Bld_version.build" Type="Int">1</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">lv_waveform_acquisition_and_logging_on_crio9036.rtexe</Property>
+				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/lv_waveform_acquisition_and_logging_on_crio9036.rtexe</Property>
+				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">支持目录</Property>
+				<Property Name="Destination[1].path" Type="Path">/home/lvuser/natinst/bin/data</Property>
+				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Source[0].itemID" Type="Str">{194711E0-D7EE-458E-855A-20CA8742529B}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/02_01/rt_main_02_01.vi</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">1</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/02_01/shared_variables.lvlib</Property>
+				<Property Name="Source[2].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[2].type" Type="Str">Library</Property>
+				<Property Name="SourceCount" Type="Int">3</Property>
+				<Property Name="TgtF_companyName" Type="Str">TJU</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">rt_app_02_01</Property>
+				<Property Name="TgtF_internalName" Type="Str">rt_app_02_01</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">版权 2018 TJU</Property>
+				<Property Name="TgtF_productName" Type="Str">rt_app_02_01</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{B27CA936-B8BF-45BD-8372-0A4A1C50137A}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">lv_waveform_acquisition_and_logging_on_crio9036.rtexe</Property>
+			</Item>
+		</Item>
 	</Item>
 	<Item Name="01_01" Type="RT CompactRIO">
 		<Property Name="alias.name" Type="Str">01_01</Property>
@@ -1361,10 +1415,10 @@ AddOutputFilter chunkFilter
 		<Property Name="target.IsRemotePanelSupported" Type="Bool">true</Property>
 		<Property Name="target.RTCPULoadMonitoringEnabled" Type="Bool">true</Property>
 		<Property Name="target.RTDebugWebServerHTTPPort" Type="Int">8001</Property>
-		<Property Name="target.RTTarget.ApplicationPath" Type="Path">/c/ni-rt/startup/startup.rtexe</Property>
+		<Property Name="target.RTTarget.ApplicationPath" Type="Path">/home/lvuser/natinst/bin/lv_waveform_acquisition_and_logging_on_crio9036.rtexe</Property>
 		<Property Name="target.RTTarget.EnableFileSharing" Type="Bool">true</Property>
 		<Property Name="target.RTTarget.IPAccess" Type="Str">+*</Property>
-		<Property Name="target.RTTarget.LaunchAppAtBoot" Type="Bool">false</Property>
+		<Property Name="target.RTTarget.LaunchAppAtBoot" Type="Bool">true</Property>
 		<Property Name="target.RTTarget.VIPath" Type="Path">/home/lvuser/natinst/bin</Property>
 		<Property Name="target.server.app.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="target.server.control.propertiesEnabled" Type="Bool">true</Property>
@@ -2612,6 +2666,9 @@ AddOutputFilter chunkFilter
 				<Item Name="WDT Get Waveform Subset I32.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Get Waveform Subset I32.vi"/>
 				<Item Name="WDT Get Waveform Subset I8.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Get Waveform Subset I8.vi"/>
 				<Item Name="WDT Get Waveform Subset SGL.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Get Waveform Subset SGL.vi"/>
+				<Item Name="WDT Get Final Time Value DBL.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/WDT Get Final Time Value DBL.vi"/>
+				<Item Name="DWDT Get Final Time Value.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/DWDTOps.llb/DWDT Get Final Time Value.vi"/>
+				<Item Name="Get Final Time Value.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/WDTOps.llb/Get Final Time Value.vi"/>
 			</Item>
 			<Item Name="niwd4c.dll" Type="Document" URL="niwd4c.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
@@ -2623,6 +2680,58 @@ AddOutputFilter chunkFilter
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 		</Item>
-		<Item Name="程序生成规范" Type="Build"/>
+		<Item Name="程序生成规范" Type="Build">
+			<Item Name="rt_app_01_01" Type="{69A947D5-514E-4E75-818E-69657C0547D8}">
+				<Property Name="App_copyErrors" Type="Bool">true</Property>
+				<Property Name="App_INI_aliasGUID" Type="Str">{2CA29E8B-3700-44DF-8BE8-98F5C2F0B1B8}</Property>
+				<Property Name="App_INI_GUID" Type="Str">{3CDE3409-4C7C-4D3C-9EA7-7999B9DF1CD1}</Property>
+				<Property Name="App_serverConfig.httpPort" Type="Int">8002</Property>
+				<Property Name="App_winsec.description" Type="Str">http://www.TJU.com</Property>
+				<Property Name="Bld_autoIncrement" Type="Bool">true</Property>
+				<Property Name="Bld_buildCacheID" Type="Str">{BF2AFBD5-B0F6-4529-827D-441290D94040}</Property>
+				<Property Name="Bld_buildSpecDescription" Type="Str">Target Type: cRIO 9036;
+LabVIEW Version: 2015;
+Interface Mode: Scan Engine.</Property>
+				<Property Name="Bld_buildSpecName" Type="Str">rt_app_01_01</Property>
+				<Property Name="Bld_defaultLanguage" Type="Str">ChineseS</Property>
+				<Property Name="Bld_excludeInlineSubVIs" Type="Bool">true</Property>
+				<Property Name="Bld_excludeLibraryItems" Type="Bool">true</Property>
+				<Property Name="Bld_excludePolymorphicVIs" Type="Bool">true</Property>
+				<Property Name="Bld_localDestDir" Type="Path">../rt_builds/NI_AB_TARGETNAME/rt_app_01_01</Property>
+				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
+				<Property Name="Bld_modifyLibraryFile" Type="Bool">true</Property>
+				<Property Name="Bld_previewCacheID" Type="Str">{BB8177E5-6FC9-4035-AFC2-EF6D4DC3E84B}</Property>
+				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
+				<Property Name="Bld_version.build" Type="Int">1</Property>
+				<Property Name="Bld_version.major" Type="Int">1</Property>
+				<Property Name="Destination[0].destName" Type="Str">lv_waveform_acquisition_and_logging_on_crio9036.rtexe</Property>
+				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/lv_waveform_acquisition_and_logging_on_crio9036.rtexe</Property>
+				<Property Name="Destination[0].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="Destination[0].preserveHierarchy" Type="Bool">true</Property>
+				<Property Name="Destination[0].type" Type="Str">App</Property>
+				<Property Name="Destination[1].destName" Type="Str">支持目录</Property>
+				<Property Name="Destination[1].path" Type="Path">/home/lvuser/natinst/bin/data</Property>
+				<Property Name="Destination[1].path.type" Type="Str">&lt;none&gt;</Property>
+				<Property Name="DestinationCount" Type="Int">2</Property>
+				<Property Name="Source[0].itemID" Type="Str">{3C3E7DEA-751F-4963-A509-B083CD526007}</Property>
+				<Property Name="Source[0].type" Type="Str">Container</Property>
+				<Property Name="Source[1].destinationIndex" Type="Int">0</Property>
+				<Property Name="Source[1].itemID" Type="Ref">/01_01/rt_main_01_01.vi</Property>
+				<Property Name="Source[1].sourceInclusion" Type="Str">TopLevel</Property>
+				<Property Name="Source[1].type" Type="Str">VI</Property>
+				<Property Name="Source[2].destinationIndex" Type="Int">1</Property>
+				<Property Name="Source[2].itemID" Type="Ref">/01_01/shared_variables.lvlib</Property>
+				<Property Name="Source[2].Library.allowMissingMembers" Type="Bool">true</Property>
+				<Property Name="Source[2].type" Type="Str">Library</Property>
+				<Property Name="SourceCount" Type="Int">3</Property>
+				<Property Name="TgtF_companyName" Type="Str">TJU</Property>
+				<Property Name="TgtF_fileDescription" Type="Str">rt_app_01_01</Property>
+				<Property Name="TgtF_internalName" Type="Str">rt_app_01_01</Property>
+				<Property Name="TgtF_legalCopyright" Type="Str">版权 2018 TJU</Property>
+				<Property Name="TgtF_productName" Type="Str">rt_app_01_01</Property>
+				<Property Name="TgtF_targetfileGUID" Type="Str">{3AB1D7AC-83D5-4D34-9BE6-B384D0F33F5F}</Property>
+				<Property Name="TgtF_targetfileName" Type="Str">lv_waveform_acquisition_and_logging_on_crio9036.rtexe</Property>
+			</Item>
+		</Item>
 	</Item>
 </Project>

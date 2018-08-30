@@ -17,5 +17,5 @@ RT CompactRIO Target = "169.254.4.43"
 RT Industrial Controller (NI 3100/3110) Target = "169.254.104.129"
 
 [我的电脑]
-我的电脑 = "192.168.19.100"
+我的电脑 = "192.168.19.182"
 
