@@ -1,0 +1,14 @@
+把labview_waveform_acquisition_and_Logging_on_compactrio项目适配到NI-cRIO9074的步骤：
+1. 在NI MAX中查找cRIO 9074终端；
+2. 格式化磁盘；
+3. 更改cRIO终端的网络配置和语言配置；
+4. 为cRIO终端安装软件；
+5. 在项目浏览器中新建终端，按IP地址和设备型号添加；
+6. 重命名终端、模块和通道；
+7. 配置终端、模块和通道；
+8. 将其它实时终端的程序文件拷贝到新建终端下；
+9. 从项目浏览器中删除其它实时终端；
+10.修改rt_loop_data_acquisition.vi;
+11.生成和拷贝配置文件到cRIO终端；
+12.配置本地FTP服务器；
+13.修改rt_main.vi中FTP簇变量。

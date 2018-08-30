@@ -1,0 +1,6 @@
+在NI MAX中连接远程终端，在终端【启动设置】中勾选【启用SSH服务器(sshd)】。
+在XShell中填写远程终端的名称、IP地址和端口，端口应设置为22。
+cd c
+zip -q -r data.zip data
+删除data文件下所有文件
+find . -type f | xargs rm -f
